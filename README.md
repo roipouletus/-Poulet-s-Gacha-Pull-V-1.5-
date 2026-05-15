@@ -141,9 +141,9 @@ extra + "\n\n" +
 
 modifier(text);
 ```
-15. Select the `Library` tab on the left
+15. Select the `context` tab on the left
 16. Delete all code within said tab
-11. Copy and paste the following code into your empty `Context` tab:
+11. Copy and paste the following code into your empty `context` tab:
 
 ```javascript
 function findStoryCard(title) {
