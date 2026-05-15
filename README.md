@@ -141,3 +141,23 @@ extra + "\n\n" +
 
 modifier(text);
 ```
+15. Select the `Library` tab on the left
+16. Delete all code within said tab
+11. Copy and paste the following code into your empty `Context` tab:
+
+```javascript
+function findStoryCard(title) {
+  if (typeof worldInfo === "undefined" || !worldInfo) return "";
+  
+  const search = title.toLowerCase();
+  
+  for (let card of worldInfo) {
+    if (card.keys && card.keys.toLowerCase().includes(search)) {
+      return card.entry || "";
+    }
+  }
+  return "";
+}
+```
+### *And you're done!*
+## i would want to say that i am a super noob at this and would gladly take any feedback!
