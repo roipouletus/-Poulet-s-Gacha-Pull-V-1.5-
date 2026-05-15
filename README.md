@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="627" height="627" alt="Poullet_Gacha_pull_50%" src="https://github.com/user-attachments/assets/af1ffa5a-bb24-42d5-8594-34c1a6040115" />
+  <img width="376" height="376" alt="Poullet_Gacha_pull_30%" src="https://github.com/user-attachments/assets/6a972c0c-c5d5-4333-94ed-c36b0134139a" />
 </p>
 
 ## Poulet's-Gacha-Pull V(1.5)
