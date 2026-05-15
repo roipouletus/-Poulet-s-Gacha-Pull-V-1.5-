@@ -161,36 +161,9 @@ function findStoryCard(title) {
 ```
 16.quit the `Script' window`
 
-17.Select the `STORY CARDS` tab on the top
+17.Select the `details` tab at the top
 
-18. create a story card that look like this:
-
-
-NAME: pullconfig
----
-ENTRY:
-
-state.customFormat = `
-
-Type: character
-
-Name:
-
-race:
-
-age:
-
-Appearance:
-
-Personality:
-
-Rarity:`;
-
-state.customInstructions = "Always stay in character and coherent with the person's personality.";
----
-TRIGGERS: pullconfig
-
-
+18. scroll down and choose `import`
 
 ### *And you're done!*
 ## i would want to say that i am a super noob at this and would gladly take any feedback!
