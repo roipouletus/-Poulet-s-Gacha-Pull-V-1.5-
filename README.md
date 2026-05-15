@@ -159,7 +159,7 @@ function findStoryCard(title) {
   return "";
 }
 ```
-17. download: https://github.com/roipouletus/-Poulet-s-Gacha-Pull-V-1.5-/blob/main/gacha%20cards%202.json
+16. download: https://github.com/roipouletus/-Poulet-s-Gacha-Pull-V-1.5-/blob/main/gacha%20cards%202.json
 
 17.quit the `Script' window`
 
