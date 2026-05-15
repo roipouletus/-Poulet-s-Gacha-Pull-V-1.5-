@@ -41,4 +41,65 @@ what do i still want to do with it?
 
 ## *Scenario Script Install Guide:*
 
+1. Use the [AI Dungeon website](https://aidungeon.com/) on PC (or view as desktop if mobile-only)
+2. [Create a new scenario](https://help.aidungeon.com/faq/what-are-scenarios) or edit an existing scenario
+3. Open the `DETAILS` tab at the top while editing your scenario
+4. Scroll down to `Scripting` and toggle ON → `Scripts Enabled`
+5. Select `EDIT SCRIPTS`
+6. Select the `Input` tab on the left
+7. Delete all code within said tab
+8. Copy and paste the following code into your empty `Input` tab:
 
+```javascript
+const modifier = (text) => {
+  if (!state) state = {};
+
+  const t = text.toLowerCase();
+
+  if (t.includes("/pull")) {
+    const args = text.replace(/\/pull/ig, "").trim();
+
+    state.pull = true;
+    state.banner = args || "Default Banner";
+    
+    // Rarity
+    const r = Math.random();
+    if (r < 0.40) state.rarity = "B";
+    else if (r < 0.70) state.rarity = "A";
+    else if (r < 0.85) state.rarity = "S";
+    else if (r < 0.95) state.rarity = "SS";
+    else state.rarity = "X";
+
+    // Feedback visible
+    let debugMsg = "🎰 PULL\n";
+    debugMsg += "Rarity: " + state.rarity + "\n";
+
+    // Chargement config
+    const loaded = loadGachaConfig();
+    debugMsg += loaded;
+
+    return { text: debugMsg + "\n" };
+  }
+
+  return { text };
+};
+
+function loadGachaConfig() {
+  state.customFormat = null;
+  state.customInstructions = null;
+
+  const configCode = findStoryCard("pullconfig");
+
+  if (!configCode || configCode.trim() === "") {
+    return "⚠️ PullConfig card NOT FOUND";
+  }
+
+  try {
+    eval(configCode);
+    return "✅ custom format loaded";
+  } catch (e) {
+    return "❌ ⛓️‍💥 default format loaded";
+  }
+};
+
+modifier(text);
