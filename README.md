@@ -161,9 +161,13 @@ function findStoryCard(title) {
 ```
 16.quit the `Script' window`
 
-17.Select the `details` tab at the top
+17. download: https://github.com/roipouletus/-Poulet-s-Gacha-Pull-V-1.5-/blob/main/gacha%20cards%202.json
 
-18. scroll down and choose `import`
+18.Select the `details` tab at the top
+
+19. scroll down and choose `import`
+
+20. import : `Gacha cards2.json`
 
 ### *And you're done!*
 ## i would want to say that i am a super noob at this and would gladly take any feedback!
