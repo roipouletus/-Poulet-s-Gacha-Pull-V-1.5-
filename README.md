@@ -103,3 +103,41 @@ function loadGachaConfig() {
 };
 
 modifier(text);
+```
+
+9. Select the `Context` tab on the left
+10. Delete all code within said tab
+11. Copy and paste the following code into your empty `Context` tab:
+
+```javascript
+const modifier = (text) => {
+  if (!state?.pull) return { text };
+
+  const rarity = state.rarity || "B";
+  const banner = state.banner || "Default Banner";
+
+  let format = state.customFormat;
+  if (!format) {
+    format = "Name:\nGender:\nAge:\nPhysical Appearance:\nPersonality:";
+  }
+
+  let extra = "";
+  if (state.customInstructions) {
+    extra = "\nADDITIONAL INSTRUCTIONS:\n" + state.customInstructions;
+  }
+
+ state.memory.frontMemory = 
+"You are a CARD GENERATOR.\n\n" +
+"Banner: " + banner + "\n" +
+"Rarity: " + rarity + "\n\n" +
+"STRICT FORMAT:\n" + 
+format +
+extra + "\n\n" +
+"IMPORTANT: Output ONLY the format above. No extra text.";
+
+  state.pull = false;
+  return { text };
+};
+
+modifier(text);
+```
