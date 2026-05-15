@@ -1,0 +1,18 @@
+[
+  {
+    "keys": "",
+    "value": "hey, here is how i will explain how 🎰Poulet's Gacha Pull🎰 actually work:\n\nWhat does my script do?\n1.it assigns a rarity when you run the command  : /pull\n2. make so the rarity affects the character creation (make it so a B character is less cool than an S tier)\n3. It writes back information in this format:\nName:\nGender:\nAge:\nPhysical Appearance: (max 2–3 sentences, concise)\nPersonality: (max 2–3 traits, no prose)\nRarity: rarity\n\nSo, what does this script do? \n-bring a simple gacha mechanic (ready to copy and paste in a story card)\n-a rarity system\n-personalised rarity odds\n-Allow different description personalization based on rarities.\n\nWhat does this script not do?\n-Work by itself, the AI will need a custom context in your AI instruction, plot essentials and author's notes.\n\nfor example let's say you want to summon a character on the daily banner of your game :\ndo -> /pull on the daily banner (the ai will get the context of the story and your input do give you a character sheet 1-2 turns after)\n\nbut i'll recomend to be more precise : \ndo -> / pull on the Cyberpunk girl Banner (by giving context, gender and theme, the Ai will Give a better answer)",
+    "type": "🎰Poulet's Gacha Pull🎰",
+    "title": "🎰Poulet's Gacha Pull🎰",
+    "description": "If this script have issues, or you maybe want to do feedbacks or suggestion i'll be happy to discuss with y'all.\ndiscord : winz_45\n\ni am really noob to script, so maybe you will find it's trash... well, i did my best and will try to make it better if i have enough feedback.",
+    "useForCharacterCreation": false
+  },
+  {
+    "keys": "pullconfig",
+    "value": "state.customFormat = `\nType: character\nName:\nrace:\nage:\nPersonality: (2-3 sentences.)\nAppearance: (2-3 sentences.)\nRarity:`;\n\nstate.customInstructions = \"make a long and complete response, ALWAYS PUT ALL POINTS.\";",
+    "type": "[GachaConfig]",
+    "title": "pullconfig",
+    "description": "here you can change the gacha sheet format.\n(when you change the format, it make take some retries!)\n\n-if your format is working, you will see: ✅ custom Format loaded\n(it will load the custom format in this story card)\n\n-if not : ⛓️‍💥default format loaded\n(it will load a basic format)\n\nhere's some examples:\n\n---exemple 1---\nstate.customFormat = `\nType: spaceship\nName:\nmanufacturer:\ncondition:\nAppearance:\nPersonality:\nRarity:`;\n\nstate.customInstructions = \"make a 750 maximum letters description.\";\n\n---exemple 2---\nstate.customFormat = `\nType: fakemon\nName:\ntype:\nLVL:\nAppearance:\nPersonality:\nRarity:`;\n\nstate.customInstructions = \"make a minimum 750 letters description, Create your own original Fakemon (fake pokemon).\";",
+    "useForCharacterCreation": false
+  }
+]
