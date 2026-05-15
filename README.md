@@ -1,4 +1,4 @@
-<img width="1254" height="1254" alt="Poullet Gacha pull" src="https://github.com/user-attachments/assets/da26b440-f328-4d1f-a770-bbc8ca1f660d" />
+<img width="627" height="627" alt="Poullet_Gacha_pull_50%" src="https://github.com/user-attachments/assets/bc13fb6f-ae70-4eb8-8c91-6b9a0af5a4ff" />
 -Poulet-s-Gacha-Pull-V-1.5-
 A script of mine does do Actual Gacha Mechanics.
 
